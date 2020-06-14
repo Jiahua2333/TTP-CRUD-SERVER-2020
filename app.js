@@ -20,6 +20,7 @@ const seedDatabase = require("./utils/seedDatabase");
 
 // Our database instance;
 const db = require("./database");
+const { connected } = require("process");
 
 // A helper function to sync our database;
 const syncDatabase = () => {

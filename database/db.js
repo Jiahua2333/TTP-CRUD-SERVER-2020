@@ -13,5 +13,13 @@ const db = new Sequelize(
   { logging: false }
 );
 
+// db
+//  .authenticate()
+//  .then(() => {
+//   console.info('INFO - Database connected.')
+//  })
+//  .catch(err => {
+//   console.error('ERROR - Unable to connect to the database:', err)
+//  })
 // Export our instance of Sequelize, which will be modified with models;
 module.exports = db;

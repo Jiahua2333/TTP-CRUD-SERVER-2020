@@ -1,14 +1,14 @@
 const pgtools = require("pgtools");
 
 // An object with user, host, port, and password properties;
-const config = process.env.DATABASE_URL || {
-  user: "postgres",
-  host: "localhost",
-  port: 5432,
-  password: process.env.LOCAL_DATABASE_PASSWORD,
-};
-// const config = process.env.DATABASE_URL;
-
+// const config =  {
+//   user: "ljh15",
+//   host: "localhost",
+//   port: 5432,
+//   password: process.env.LOCAL_DATABASE_PASSWORD,
+// };
+// const config = '	postgres://wittearx:sShleFOWYy5SvecDPEsi4kNX2hCdlprW@hansken.db.elephantsql.com:5432/wittearx';
+const config = "postgres://ljh15:3112001944ljh@localhost:5432/ttp-crud-server"
 // The name of the database to create;
 const databaseName = require("./databaseName");
 
@@ -27,5 +27,5 @@ const cb = (err, res) => {
 };
 
 const createLocalDatabase = () => pgtools.createdb(config, databaseName, cb);
-
+console.log(config, databaseName);
 module.exports = createLocalDatabase;
